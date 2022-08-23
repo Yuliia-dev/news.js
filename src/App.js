@@ -1,5 +1,21 @@
+import { Suspense } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { NewsDetailsPage, NewsPage } from './pages';
+import Navigation from './component';
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <>
+      <Navigation />
+      <Suspense fallback="">
+        <Routes>
+          <Route path="/" element={<NewsPage />} />
+          <Route path="/news/:newsId" element={<NewsDetailsPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </Suspense>
+    </>
+  );
 }
 
 export default App;
