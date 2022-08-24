@@ -1,4 +1,4 @@
 import NewsDetailsPage from './NewsDetailsPage';
-import NewsPage from './NewsPage';
+import AllNewsPage from './AllNewsPage';
 
-export { NewsDetailsPage, NewsPage };
+export { NewsDetailsPage, AllNewsPage };

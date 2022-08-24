@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { NewsDetailsPage, NewsPage } from './pages';
+import { NewsDetailsPage, AllNewsPage } from './pages';
 import Navigation from './component';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Navigation />
       <Suspense fallback="">
         <Routes>
-          <Route path="/" element={<NewsPage />} />
+          <Route path="/" element={<AllNewsPage />} />
           <Route path="/news/:newsId" element={<NewsDetailsPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
