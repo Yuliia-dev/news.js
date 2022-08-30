@@ -10,7 +10,6 @@ export default class fetchNews {
     const response = await axios.get(
       `https://newsapi.org/v2/everything?domains=bbc.co.uk&pageSize=10&page=${this.page}&apiKey=${KEY}`
     );
-    console.log(response.data);
     return response.data;
   }
 

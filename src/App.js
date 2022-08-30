@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { NewsDetailsPage, AllNewsPage, AppleNewsPage } from './pages';
-import Navigation from './component';
+import { Navigation } from './component';
 
 function App() {
   return (

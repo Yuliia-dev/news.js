@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import fetchNews from '../API/news-api';
+import { Loader, AllNews } from '../component';
 
 const newsApi = new fetchNews();
 
@@ -13,18 +14,22 @@ function AllNewsPage() {
     newsApi
       .allNews()
       .then(({ articles }) => {
-        console.log(articles);
+        setLoading(true);
         setNews(articles);
       })
       .catch(error => setError(error))
-      .finally(setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
-  //   newsApi.appleNews().then(data => console.log(data.articles));
   return (
     <>
+      {loading && !news && <Loader />}
       <ul>
-        {news && news.map(item => <li key={item.title}>{item.title}</li>)}
+        {news && <AllNews news={news} />}
+        {/* {news && news?.map(item => <AllNews news={item} />)} */}
       </ul>
+      {error && <p>You have some problem, pleas try letter</p>}
     </>
   );
 }

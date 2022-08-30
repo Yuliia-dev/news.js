@@ -1,3 +1,5 @@
-import Navigation from './Navigation';
+import Navigation from './Navigation/Navigation';
+import Loader from './Loader/Loader';
+import AllNews from './AllNews/AllNews';
 
-export default Navigation;
+export { Navigation, Loader, AllNews };
