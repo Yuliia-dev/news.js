@@ -13,9 +13,10 @@ function AllNewsPage() {
     setLoading(true);
     newsApi
       .allNews()
-      .then(({ articles }) => {
+      .then(({ value }) => {
+        console.log(value);
         setLoading(true);
-        setNews(articles);
+        setNews(value);
       })
       .catch(error => setError(error))
       .finally(() => {
