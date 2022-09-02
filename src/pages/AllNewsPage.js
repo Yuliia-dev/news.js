@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import fetchNews from '../API/news-api';
 import { Loader, AllNews } from '../component';
+import { NewsList } from './AllNewsPage.styled';
 
 const newsApi = new fetchNews();
 
@@ -14,7 +15,6 @@ function AllNewsPage() {
     newsApi
       .allNews()
       .then(({ value }) => {
-        console.log(value);
         setLoading(true);
         setNews(value);
       })
@@ -26,10 +26,7 @@ function AllNewsPage() {
   return (
     <>
       {loading && !news && <Loader />}
-      <ul>
-        {news && <AllNews news={news} />}
-        {/* {news && news?.map(item => <AllNews news={item} />)} */}
-      </ul>
+      <NewsList>{news && <AllNews news={news} />}</NewsList>
       {error && <p>You have some problem, pleas try letter</p>}
     </>
   );
