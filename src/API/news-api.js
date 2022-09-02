@@ -14,7 +14,7 @@ export default class fetchNews {
       params: {
         q: this.query,
         pageNumber: this.page,
-        pageSize: '10',
+        pageSize: '12',
         autoCorrect: 'true',
         fromPublishedDate: 'null',
         toPublishedDate: 'null',
