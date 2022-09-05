@@ -5,7 +5,6 @@ export default function AllNews({ news }) {
     <>
       {news?.map(item => (
         <NewsItem key={item.id}>
-          <NewsTitle>{item.title}</NewsTitle>
           <NewsImg
             src={
               item.image.url ||
@@ -13,6 +12,7 @@ export default function AllNews({ news }) {
             }
             alt="Images"
           />
+          <NewsTitle>{item.title}</NewsTitle>
           <NewsDiscr>{item.description}</NewsDiscr>
         </NewsItem>
       ))}
