@@ -1,4 +1,10 @@
-import { NewsItem, NewsImg, NewsTitle, NewsDiscr } from './AllNews.styled';
+import {
+  NewsItem,
+  NewsImg,
+  NewsTitle,
+  NewsDiscr,
+  NewsWrap,
+} from './AllNews.styled';
 
 export default function AllNews({ news }) {
   return (
@@ -12,8 +18,10 @@ export default function AllNews({ news }) {
             }
             alt="Images"
           />
-          <NewsTitle>{item.title}</NewsTitle>
-          <NewsDiscr>{item.description}</NewsDiscr>
+          <NewsWrap>
+            <NewsTitle>{item.title}</NewsTitle>
+            <NewsDiscr>{item.description}</NewsDiscr>
+          </NewsWrap>
         </NewsItem>
       ))}
     </>
