@@ -5,7 +5,7 @@ export const NewsItem = styled.li`
   bottom: 0px;
   transition: 0.5s;
   cursor: pointer;
-  overflow: auto;
+  /* overflow: auto; */
   box-shadow: 5px 5px 3px #888888;
   list-style: none;
   background-color: white;
@@ -18,17 +18,30 @@ export const NewsItem = styled.li`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(196, 196, 186, 0.1);
+    background: rgba(196, 196, 186, 0.2);
     transform: scaleY(0);
     transition: 0.5s;
     transform-origin: top;
   }
-
   :hover::before {
     transform: scaleY(1);
   }
 `;
 
+export const NewsWrap = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(196, 196, 186, 0.6);
+`;
+
+export const NewsImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 export const NewsTitle = styled.h2`
   margin: 0;
   padding: 10px;
@@ -37,12 +50,6 @@ export const NewsTitle = styled.h2`
   font-family: 'georgia';
   font-weight: bold;
   text-align: center;
-`;
-
-export const NewsImg = styled.img`
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
 `;
 
 export const NewsDiscr = styled.p`
