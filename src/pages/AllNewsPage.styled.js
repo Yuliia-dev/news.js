@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const NewsList = styled.ul`
+  position: relative;
   --gap: 16px;
   --num-cols: 4;
   --row-hight: 500px;
@@ -16,6 +17,11 @@ export const NewsList = styled.ul`
 
   @media screen and (max-width: 1024px) {
     --num-cols: 2;
-    --row-hight: 200px;
+    --row-hight: 400px;
+  }
+
+  @media screen and (max-width: 480px) {
+    --num-cols: 1;
+    --row-hight: 400px;
   }
 `;

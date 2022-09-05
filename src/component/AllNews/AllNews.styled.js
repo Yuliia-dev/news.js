@@ -1,24 +1,38 @@
 import styled from 'styled-components';
 
 export const NewsItem = styled.li`
-  list-style: none;
+  position: relative;
   bottom: 0px;
-  padding: 10px;
-  background-color: white;
-  /* border: solid black 1px; */
-  border-top: solid green 2px;
   transition: 0.5s;
   cursor: pointer;
   overflow: auto;
+  box-shadow: 5px 5px 3px #888888;
+  list-style: none;
+  background-color: white;
   :hover {
     bottom: 10px;
+  }
+
+  ::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(196, 196, 186, 0.1);
+    transform: scaleY(0);
+    transition: 0.5s;
+    transform-origin: top;
+  }
+
+  :hover::before {
+    transform: scaleY(1);
   }
 `;
 
 export const NewsTitle = styled.h2`
   margin: 0;
   padding: 10px;
-  height: 25%;
+  /* height: 25%; */
   font-size: 18px;
   font-family: 'georgia';
   font-weight: bold;
