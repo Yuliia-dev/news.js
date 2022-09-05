@@ -18,12 +18,11 @@ export const NewsItem = styled.li`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(196, 196, 186, 0.1);
+    background: rgba(196, 196, 186, 0.2);
     transform: scaleY(0);
     transition: 0.5s;
     transform-origin: top;
   }
-
   :hover::before {
     transform: scaleY(1);
   }
