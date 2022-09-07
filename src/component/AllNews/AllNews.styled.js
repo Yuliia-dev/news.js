@@ -5,7 +5,7 @@ export const NewsItem = styled.li`
   bottom: 0px;
   transition: 0.5s;
   cursor: pointer;
-  /* overflow: auto; */
+  overflow: hidden;
   box-shadow: 5px 5px 3px #888888;
   list-style: none;
   background-color: white;
