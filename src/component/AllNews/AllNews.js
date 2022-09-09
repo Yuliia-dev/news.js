@@ -16,7 +16,7 @@ export default function AllNews({ news }) {
               item.image.url ||
               `https://icon-library.com/images/no-photo-available-icon/no-photo-available-icon-4.jpg`
             }
-            alt="Images"
+            alt={item.provider.name}
           />
           <NewsWrap>
             <NewsTitle>{item.title}</NewsTitle>
