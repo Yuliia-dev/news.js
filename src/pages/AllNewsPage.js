@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import fetchNews from '../API/news-api';
 import { Loader, AllNews } from '../component';
 import { NewsList } from './AllNewsPage.styled';
+import SelectQuantityPage from '../component/SelectQuantityPage/SelectQuantityPage';
 
 const newsApi = new fetchNews();
 
@@ -25,8 +26,11 @@ function AllNewsPage() {
   }, []);
   return (
     <>
+      <SelectQuantityPage />
       {loading && !news && <Loader />}
+
       <NewsList>{news && <AllNews news={news} />}</NewsList>
+
       {error && <p>You have some problem, pleas try letter</p>}
     </>
   );
