@@ -14,7 +14,7 @@ export default function AllNews({ news }) {
           <NewsImg
             src={
               item.image.url ||
-              `https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=675%2Cmetadata=none%2Conerror=redirect%2Cq=85%2Cwidth=1200/wp-content/uploads/no-news-is-good-news-day1.jpg`
+              `https://cdn.create.vista.com/api/media/small/233897000/stock-photo-top-view-wooden-cubes-word`
             }
             alt={item.provider.name}
           />
