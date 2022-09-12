@@ -14,7 +14,7 @@ export default function AllNews({ news }) {
           <NewsImg
             src={
               item.image.url ||
-              `https://icon-library.com/images/no-photo-available-icon/no-photo-available-icon-4.jpg`
+              `https://www.daysoftheyear.com/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=cover%2Cheight=675%2Cmetadata=none%2Conerror=redirect%2Cq=85%2Cwidth=1200/wp-content/uploads/no-news-is-good-news-day1.jpg`
             }
             alt={item.provider.name}
           />
