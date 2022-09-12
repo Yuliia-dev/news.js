@@ -3,6 +3,7 @@ const KEY = 'b492db96c5msh527b7c6772e1e3bp1b2b59jsne402ddd76d30';
 
 export default class fetchNews {
   constructor() {
+    this.pageSize = '12';
     this.page = '1';
     this.query = 'news';
   }
@@ -14,7 +15,7 @@ export default class fetchNews {
       params: {
         q: this.query,
         pageNumber: this.page,
-        pageSize: '12',
+        pageSize: this.pageSize,
         autoCorrect: 'true',
         fromPublishedDate: 'null',
         toPublishedDate: 'null',

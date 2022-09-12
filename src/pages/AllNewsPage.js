@@ -8,11 +8,15 @@ const newsApi = new fetchNews();
 
 function AllNewsPage() {
   const [news, setNews] = useState(null);
+  const [pageSize, setPageSize] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     setLoading(true);
+    if (pageSize) {
+      newsApi.pageSize = pageSize;
+    }
     newsApi
       .allNews()
       .then(({ value }) => {
@@ -23,10 +27,10 @@ function AllNewsPage() {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [pageSize]);
   return (
     <>
-      <SelectQuantityPage />
+      <SelectQuantityPage pageSize={setPageSize} />
       {loading && !news && <Loader />}
 
       <NewsList>{news && <AllNews news={news} />}</NewsList>

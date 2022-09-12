@@ -1,12 +1,21 @@
-export default function SelectQuantityPage() {
+import {
+  SelectWrapper,
+  Text,
+  TextSelect,
+  TextOption,
+} from './SelectQuantityPage.styled';
+
+export default function SelectQuantityPage({ pageSize }) {
   return (
-    <>
-      <h3>Select the amount of news</h3>
-      <select name="quantityPage">
-        <option>6 </option>
-        <option>12 </option>
-        <option>18 </option>
-      </select>
-    </>
+    <SelectWrapper>
+      <Text>Select the amount of news</Text>
+      <TextSelect name="quantityPage" onChange={e => pageSize(e.target.value)}>
+        <TextOption value="8"> 8 </TextOption>
+        <TextOption selected value="16">
+          16
+        </TextOption>
+        <TextOption value="24"> 24 </TextOption>
+      </TextSelect>
+    </SelectWrapper>
   );
 }
