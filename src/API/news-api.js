@@ -30,7 +30,7 @@ export default class fetchNews {
 
   async allNews() {
     const response = await axios.request(this.optionsForRequest());
-    console.log(response);
+    // console.log(response);
     return response.data;
   }
 
