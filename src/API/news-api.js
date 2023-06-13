@@ -33,44 +33,4 @@ export default class fetchNews {
     // console.log(response);
     return response.data;
   }
-
-  async appleNews() {
-    const response = await axios.get(
-      `https://newsapi.org/v2/everything?pageSize=10&page=${this.page}&q=apple&from=2022-08-21&to=2022-08-21&sortBy=popularity&apiKey=${KEY}`
-    );
-    console.log(response.data);
-    return response.data;
-  }
-
-  async teslaNews() {
-    const response = await axios.get(
-      `https://newsapi.org/v2/everything?pageSize=10&page=${this.page}&q=tesla&sortBy=publishedAt&apiKey=${KEY}`
-    );
-    console.log(response.data);
-    return response.data;
-  }
-
-  async businessNews() {
-    const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?pageSize=10&page=${this.page}&country=us&category=business&apiKey=${KEY}`
-    );
-    console.log(response.data);
-    return response.data;
-  }
-
-  async techCrunchNews() {
-    const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?pageSize=10&page=${this.page}&sources=techcrunch&apiKey=${KEY}`
-    );
-    console.log(response.data);
-    return response.data;
-  }
-
-  async wallStreetJournalNews() {
-    const response = await axios.get(
-      `https://newsapi.org/v2/everything?pageSize=10&page=${this.page}&domains=wsj.com&apiKey=${KEY}`
-    );
-    console.log(response.data);
-    return response.data;
-  }
 }
