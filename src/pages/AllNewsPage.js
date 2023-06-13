@@ -35,7 +35,14 @@ function AllNewsPage() {
 
       <NewsList>{news && <AllNews news={news} />}</NewsList>
 
-      {error && <p>You have some problem, pleas try letter</p>}
+      {error && (
+        <img
+          src="https://static.s4be.cochrane.org/app/uploads/2017/04/shutterstock_531145954.jpg"
+          alt="Error. You have some problem"
+          height="100%"
+          width="100%"
+        />
+      )}
     </>
   );
 }

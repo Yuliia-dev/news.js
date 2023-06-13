@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav`
-  padding: 60px;
+  padding: 40px;
   text-align: center;
   background: #1abc9c;
 `;
