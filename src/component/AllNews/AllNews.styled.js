@@ -29,6 +29,8 @@ export const NewsItem = styled.li`
 `;
 
 export const NewsWrap = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -45,7 +47,7 @@ export const NewsImg = styled.img`
 export const NewsTitle = styled.h2`
   margin: 0;
   padding: 10px;
-  /* height: 25%; */
+  height: 80px;
   font-size: 18px;
   font-family: 'georgia';
   font-weight: bold;
@@ -56,5 +58,7 @@ export const NewsDiscr = styled.p`
   margin: 0;
   padding: 5px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 10px;
+  /* height: 10px; */
+  overflow: hidden;
 `;
